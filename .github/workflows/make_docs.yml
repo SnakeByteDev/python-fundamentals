@@ -1,12 +1,10 @@
 name: make_docs
 
-# Controls when the action will run.
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches:
-       - main
-
+      - main
+      -
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -17,15 +15,22 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     if: github.event.repository.fork == false
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: 3.8
-      - run: pip install mkdocs-jupyter
-#       - run: pip install jupyter
-      - run: cp *.ipynb docs/ # copy all notebooks to docs folder
 
-      - run: mkdocs gh-deploy --force
+    steps:
+    - name: Checkout the code
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.9'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Deploy to GitHub Pages
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: mkdocs gh-deploy --force
