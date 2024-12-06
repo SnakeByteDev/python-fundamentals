@@ -22,6 +22,7 @@ theme:
   features:
     - navigation.instant
     - navigation.top
+
 markdown_extensions:
   - meta
   - pymdownx.highlight
@@ -40,7 +41,7 @@ nav:
   - Intro: introduction.md
   - Hello World: hello_world.ipynb
   - Variables: variables.ipynb
-
+  - Data Types: data_types.ipynb
 
 extra:
   generator: false
