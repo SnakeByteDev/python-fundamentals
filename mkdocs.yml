@@ -43,6 +43,7 @@ nav:
   - Variables: variables.ipynb
   - Data Types: data_types.ipynb
   - Type Casting: type_casting.ipynb
+  - Strings: strings.ipynb
 
 extra:
   generator: false
