@@ -42,6 +42,7 @@ nav:
   - Hello World: hello_world.ipynb
   - Variables: variables.ipynb
   - Data Types: data_types.ipynb
+  - Type Casting: type_casting.ipynb
 
 extra:
   generator: false
