@@ -1,0 +1,47 @@
+site_name: "Python Fundamentals"
+#site_url:
+#site_description:
+
+repo_url: "https://github.com/SnakeByteDev/python-fundamentals"
+
+theme:
+  name: "material"
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.top
+
+
+markdown_extensions:
+  - meta
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+plugins:
+ - mkdocs-jupyter:
+    include_source: True
+ - search
+# - social
+
+nav:
+  - Home: index.md
+  - Intro: introduction.md
+  - Hello World: hello_world.ipynb
+
+
+extra:
+  generator: false
