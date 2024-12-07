@@ -44,6 +44,8 @@ nav:
   - Data Types: data_types.ipynb
   - Type Casting: type_casting.ipynb
   - Strings: strings.ipynb
+  - Conditional Statements: conditional_statements.ipynb
+
 
 extra:
   generator: false
