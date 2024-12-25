@@ -45,6 +45,7 @@ nav:
   - Type Casting: type_casting.ipynb
   - Strings: strings.ipynb
   - Conditional Statements: conditional_statements.ipynb
+  - Functions: functions.ipynb
 
 
 extra:
